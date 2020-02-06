@@ -41,6 +41,12 @@ const StyledThemeButtons = styled(ThemeButtons)`
       `border: 1px solid #F22487;`
     )}
   }
+
+  @media screen and (max-width: 1000px){
+    position: fixed;
+    top: 16px;
+    left: calc(50vw - 20px);
+  }
 `
 
 export default StyledThemeButtons

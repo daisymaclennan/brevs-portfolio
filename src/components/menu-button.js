@@ -51,7 +51,7 @@ const StyledMenuButton = styled(MenuButton)`
     left: 0;
   }
 
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 1000px){
     margin-left: 130px;
   }
 `

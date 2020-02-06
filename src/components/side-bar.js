@@ -24,9 +24,9 @@ const StyledSideBar = styled(SideBar)`
     transform: rotate(-90deg);
   }
 
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 1000px){
     top: 32px;
-    left: 32px;
+    left: 31px;
     padding-bottom: 30px;
     clip-path: polygon(0px 0px, 0px 470px, 48px 470px, 48px 0px);
 
@@ -43,9 +43,9 @@ const StyledSideBar = styled(SideBar)`
     }
   }
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 1000px){
     top: 16px;
-    left: 16px;
+    left: 17px;
     padding-bottom: 15px;
     clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);
     img{

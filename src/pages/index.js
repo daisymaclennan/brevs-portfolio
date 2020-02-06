@@ -1,7 +1,45 @@
 import React from "react"
 import Layout from "../components/layout"
+import NameImage from "../components/name-image"
+import GridLayout from "../components/grid-layout"
+import Tagline from "../components/tagline"
+import HighlightText from "../components/highlight-text"
+import SectionTitle from "../components/section-title"
+import CenterBigText from "../components/center-big-text"
+import Stats from "../components/stats"
 
 export default () => (
   <Layout>
+    <GridLayout>
+      <Tagline>
+        Hi, I’m <HighlightText box>Jack</HighlightText>. I design websites to create better experiences on the web.
+      </Tagline>
+      <SectionTitle>
+        About <HighlightText>Me</HighlightText>
+      </SectionTitle>
+      <CenterBigText>
+        <p>
+          I’m a twenty-six year old UI designer from England who not so recently graduated from the University of Portsmouth studying Digital Media BSc, Which is a culmination of web design / development and other digital media.
+        </p>
+
+        <p>
+          My skillset does not stop at UI design, I have a strong passion for UX design, I like to see myself as a designer who embraces the challenges UX gives UI designers. Thinking about how I can overcome a problem through design is a deep passion of mine. I have worked at <HighlightText>Si digital</HighlightText> for the past two years, I ha  ve learn’t so much with the design and development team there.
+        </p>
+
+        <p>
+          I enjoy working with clients that truely value their website and want to improve the experince of their customers who keep their business running.
+        </p>
+      </CenterBigText>
+      <Stats stats={ stats } />
+    </GridLayout>
   </Layout>
 )
+
+const stats = [
+  ["5", "Client projects"],
+  ["2", "Years of experience"],
+  ["1200", "Lines of Lorem Ipsum"],
+  ["12", "Instagram Posts"],
+  ["4", "Dribbble Posts"],
+  ["8", "Client projects"]
+]

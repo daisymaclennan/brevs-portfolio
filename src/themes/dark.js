@@ -6,9 +6,10 @@ const darkTheme = {
     titleSolid: '#FFFFFF',
     titleShape: 'rgba(255, 255, 255, 0.17)',
     highlight: '#FFFFFF',
-    paragraph: '#111111',
+    paragraph: '#FFFFFF',
     sideBarText: 'rgba(255, 255, 255, 0.4)',
-    menuButton: "#FFFFFF"
+    menuButton: "#FFFFFF",
+    stripes: '#444444'
   }
 }
 

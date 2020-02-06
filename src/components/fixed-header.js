@@ -12,11 +12,18 @@ const FixedHeader = ({ className, theme, changeTheme }) => (
 
 const StyledFixedHeader = styled(FixedHeader)`
   position: fixed;
-  display: flex;
+  z-index: 5;
 
-  @media screen and (min-width: 800px){
+  @media screen and (max-width: 1000px){
+    top: 16px;
+    right: 16px;
+  }
+
+  @media screen and (min-width: 1000px){
     top: 50px;
     right: 30px;
+
+    display: flex;
   }
 `
 
