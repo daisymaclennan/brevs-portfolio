@@ -7,6 +7,7 @@ import HighlightText from "../components/highlight-text"
 import SectionTitle from "../components/section-title"
 import CenterBigText from "../components/center-big-text"
 import Stats from "../components/stats"
+import Project from "../components/project"
 
 export default () => (
   <Layout>
@@ -31,6 +32,15 @@ export default () => (
         </p>
       </CenterBigText>
       <Stats stats={ stats } />
+      <SectionTitle>
+        Client <HighlightText>Pro</HighlightText>jects
+      </SectionTitle>
+      {/*Reuse this component to add new projects*/}
+      <Project
+        title="Smartdriverclub Insurance"
+        description="I was directly involved within the website redesign, Smartdriverclub Insurance wanted a fresh new look for their website. This involved building a design system for the developers to work from aswell as thinking through users flows of how the website will be used to better conversion rate."
+        image="sdc.png"
+      />
     </GridLayout>
   </Layout>
 )

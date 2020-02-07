@@ -20,6 +20,8 @@ const StyledStats = styled(Stats)`
   color: #FFFFFF;
   text-align: center;
 
+  width: 100vw;
+
   .grid{
     display: grid;
   }
@@ -29,25 +31,44 @@ const StyledStats = styled(Stats)`
     flex-direction: column;
   }
 
+  @media screen and (max-width: 1000px){
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-left: -16px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    .grid{
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 60px;
+    }
+
+    span:first-of-type{
+      font-size: 64px;
+    }
+
+    span:last-of-type{
+      font-size: 18px;
+    }
+  }
+
   @media screen and (min-width: 1000px){
     padding-top: 130px;
     padding-bottom: 130px;
 
-    width: 100vw;
+
     grid-column-start: 1;
+    grid-column-end: 13;
 
     margin-left:-30px;
 
     .grid{
       margin-left: auto;
       margin-right: auto;
-      width: 1200px;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 50px;
       grid-row-gap: 130px;
     }
-
-
-
 
     span:first-of-type{
       font-size: 88px;

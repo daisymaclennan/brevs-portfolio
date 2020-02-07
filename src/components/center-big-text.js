@@ -8,7 +8,6 @@ const CenterBigText = styled.div`
     display: block;
   }
   @media screen and (min-width: 1000px){
-    margin-top: 700px;
     margin-bottom: 125px;
     font-size: 32px;
     line-height: 200%;
