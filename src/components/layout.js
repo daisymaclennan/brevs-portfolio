@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
+    font-smooth: anti-aliasing;
   }
 
   h2{
