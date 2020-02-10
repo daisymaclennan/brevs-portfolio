@@ -29,10 +29,31 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
+  }
+
+  h2{
+    font-size: calc(48px + (124 - 48) * ((100vw - 300px) / (2000 - 300)));
+    line-height: 112.5%;
+  }
+
+  h3, a{
+    font-size: calc(112px + (372 - 112) * ((100vw - 300px) / (2000 - 300)));
+    line-height: 112.5%;
+  }
+
+  h4{
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (2000 - 300)));
+    line-height: 150%;
+  }
+
+  p{
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (2000 - 300)));
+    line-height: 200%;
+    margin-bottom: calc(32px + (64 - 32)* ((100vw -300px) / (2000 - 300)));
   }
 
   @media screen and (max-width: 1000px){
@@ -66,7 +87,6 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <FixedHeader theme={ theme } changeTheme={ changeTheme }/>
         <SideBar />
-
         { children }
       </ThemeProvider>
     </div>

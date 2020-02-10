@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const GridLayout = styled.div`
   display: grid;
-  margin-top: 400px;
 
   @media screen and (max-width: 1000px){
     grid-template-columns: repeat(4, var(--columnWidth));

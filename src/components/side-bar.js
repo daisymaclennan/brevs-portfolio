@@ -24,6 +24,25 @@ const StyledSideBar = styled(SideBar)`
     transform: rotate(-90deg);
   }
 
+  @media screen and (max-width: 1000px){
+    top: 16px;
+    left: 17px;
+    padding-bottom: 15px;
+    clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);
+
+    img{
+      width: 32px;
+      height: 32px;
+      margin-bottom: 24px;
+    }
+
+    h1{
+      font-size: 16px;
+      line-height: 32px;
+      height: 239px;
+    }
+  }
+
   @media screen and (min-width: 1000px){
     top: 32px;
     left: 31px;
@@ -43,23 +62,7 @@ const StyledSideBar = styled(SideBar)`
     }
   }
 
-  @media screen and (max-width: 1000px){
-    top: 16px;
-    left: 17px;
-    padding-bottom: 15px;
-    clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);
-    img{
-      width: 32px;
-      height: 32px;
-      margin-bottom: 24px;
-    }
 
-    h1{
-      font-size: 16px;
-      line-height: 32px;
-      height: 239px;
-    }
-  }
 `
 
 export default StyledSideBar

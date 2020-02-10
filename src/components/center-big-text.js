@@ -7,23 +7,8 @@ const CenterBigText = styled.div`
     opacity: 0.8;
     display: block;
   }
-  @media screen and (min-width: 1000px){
-    margin-bottom: 125px;
-    font-size: 32px;
-    line-height: 200%;
-
-    grid-column-start: 4;
-    grid-column-end: 10;
-
-    p + p{
-      margin-top: 30px;
-    }
-  }
 
   @media screen and (max-width: 1000px){
-    margin-top: 70px;
-    margin-bottom: 70px;
-    font-size: 18px;
     line-height: 200%;
 
     grid-column-start: 1;
@@ -33,6 +18,18 @@ const CenterBigText = styled.div`
       margin-top: 20px;
     }
   }
+
+  @media screen and (min-width: 1000px){
+    line-height: 200%;
+    grid-column-start: 4;
+    grid-column-end: 10;
+
+    p + p{
+      margin-top: 30px;
+    }
+  }
+
+
 `
 
 export default CenterBigText

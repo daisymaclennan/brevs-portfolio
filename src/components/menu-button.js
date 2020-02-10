@@ -15,7 +15,6 @@ const StyledMenuButton = styled(MenuButton)`
   height: 14px;
   display: flex;
   border: 0;
-
   background-color: rgba(0, 0, 0, 0);
 
   span{

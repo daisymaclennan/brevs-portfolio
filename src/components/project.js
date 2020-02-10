@@ -5,7 +5,7 @@ import GridLayout from './grid-layout'
 const Project = ({ className, title, description, image}) => (
   <GridLayout className={ className }>
     <div>
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <p>{description}</p>
     </div>
     <img src={`/images/${image}`} alt={`Screenshot of ${title} project`}/>
@@ -13,27 +13,28 @@ const Project = ({ className, title, description, image}) => (
 )
 
 const StyledProject = styled(Project)`
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 60px;
-  h3, p{
+  margin-left: 0px;
+  margin-right: 0px;
+
+  h4, p{
     color: ${props => props.theme.colors.paragraph};
   }
 
   @media screen and (max-width: 1000px){
     grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column-end: 5;
+    margin-top: 60px;
+
     div{
       grid-column-start: 1;
       grid-column-end: 5;
     }
-    h3{
-      font-size: 40px;
+
+    h4{
       margin-bottom: 30px;
     }
 
     p{
-      font-size: 18px;
       line-height: 200%;
       margin-bottom: 60px;
     }
@@ -51,20 +52,21 @@ margin-top: 60px;
   }
 
   @media screen and (min-width: 1000px){
+    grid-column-start: 1;
+    grid-column-end: 13;
+    margin-top: 30px;
+
     div{
       grid-column-start: 2;
-      grid-column-end: 8;
-      margin-top: auto;
-      margin-bottom: auto;
+      grid-column-end: 6;
+      margin-top: 100px;
     }
 
-    h3{
-      font-size: 80px;
+    h4{
       margin-bottom: 30px;
     }
 
     p{
-      font-size: 32px;
       line-height: 200%;
     }
 
@@ -76,7 +78,7 @@ margin-top: 60px;
       border-left: 31px solid black;
       border-right: 31px solid black;
       width: 100%;
-      grid-column-start: 9;
+      grid-column-start: 7;
       grid-column-end: 13;
     }
   }

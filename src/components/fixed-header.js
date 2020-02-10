@@ -22,7 +22,6 @@ const StyledFixedHeader = styled(FixedHeader)`
   @media screen and (min-width: 1000px){
     top: 50px;
     right: 30px;
-
     display: flex;
   }
 `

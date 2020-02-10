@@ -31,6 +31,15 @@ const StyledStats = styled(Stats)`
     flex-direction: column;
   }
 
+  span:first-of-type{
+    font-size: calc(64px + (88 - 64) * ((100vw - 300px) / (2000 - 300)));
+    line-height: 100%;
+  }
+
+  span:last-of-type{
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (2000 - 300)));
+  }
+
   @media screen and (max-width: 1000px){
     padding-top: 70px;
     padding-bottom: 70px;
@@ -43,19 +52,11 @@ const StyledStats = styled(Stats)`
       grid-row-gap: 60px;
     }
 
-    span:first-of-type{
-      font-size: 64px;
-    }
-
-    span:last-of-type{
-      font-size: 18px;
-    }
   }
 
   @media screen and (min-width: 1000px){
     padding-top: 130px;
     padding-bottom: 130px;
-
 
     grid-column-start: 1;
     grid-column-end: 13;
@@ -68,14 +69,6 @@ const StyledStats = styled(Stats)`
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 50px;
       grid-row-gap: 130px;
-    }
-
-    span:first-of-type{
-      font-size: 88px;
-    }
-
-    span:last-of-type{
-      font-size: 32px;
     }
   }
 `

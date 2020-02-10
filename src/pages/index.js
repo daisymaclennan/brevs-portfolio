@@ -1,13 +1,14 @@
-import React from "react"
-import Layout from "../components/layout"
-import NameImage from "../components/name-image"
-import GridLayout from "../components/grid-layout"
-import Tagline from "../components/tagline"
-import HighlightText from "../components/highlight-text"
-import SectionTitle from "../components/section-title"
-import CenterBigText from "../components/center-big-text"
-import Stats from "../components/stats"
-import Project from "../components/project"
+import React from 'react'
+import Layout from '../components/layout'
+import NameImage from '../components/name-image'
+import GridLayout from '../components/grid-layout'
+import Tagline from '../components/tagline'
+import HighlightText from '../components/highlight-text'
+import SectionTitle from '../components/section-title'
+import CenterBigText from '../components/center-big-text'
+import Stats from '../components/stats'
+import Project from '../components/project'
+import Team from '../components/team'
 
 export default () => (
   <Layout>
@@ -15,6 +16,7 @@ export default () => (
       <Tagline>
         Hi, I’m <HighlightText box>Jack</HighlightText>. I design websites to create better experiences on the web.
       </Tagline>
+      {/*About Me Section*/}
       <SectionTitle>
         About <HighlightText>Me</HighlightText>
       </SectionTitle>
@@ -31,16 +33,27 @@ export default () => (
           I enjoy working with clients that truely value their website and want to improve the experince of their customers who keep their business running.
         </p>
       </CenterBigText>
+      {/*Number stats grid - change values by editing the stats variables at the bottom*/}
       <Stats stats={ stats } />
+      {/*Project section*/}
       <SectionTitle>
         Client <HighlightText>Pro</HighlightText>jects
       </SectionTitle>
       {/*Reuse this component to add new projects*/}
+      {/*Smartdriverclub Insurance*/}
       <Project
         title="Smartdriverclub Insurance"
         description="I was directly involved within the website redesign, Smartdriverclub Insurance wanted a fresh new look for their website. This involved building a design system for the developers to work from aswell as thinking through users flows of how the website will be used to better conversion rate."
         image="sdc.png"
       />
+      <Team team={ smartdriverclubTeam } />
+      {/*Limbo*/}
+      <Project
+        title="LimbO"
+        description="LimbO Came to Si digital for help increasing sales but maintaining to accessibility of configuring a customers own LimbO."
+        image="sdc.png"
+      />
+      <Team team={ limboTeam } />
     </GridLayout>
   </Layout>
 )
@@ -53,3 +66,25 @@ const stats = [
   ["4", "Dribbble Posts"],
   ["8", "Client projects"]
 ]
+
+const smartdriverclubTeam = {
+  ui: ["Jack Bretherick"],
+  ux: ["Jack Bretherick"],
+  dev: ["Danny Walker"],
+  leadDesign: "Tom O'malley",
+  leadDev: "Oli Northam",
+  agency: "Si digital Ltd",
+  year: 2020,
+  website: ""
+}
+
+const limboTeam = {
+  ui: ["Jack Bretherick"],
+  ux: ["Jack Bretherick", "Tom O'malley"],
+  dev: ["Danny Walker"],
+  leadDesign: "Tom O'malley",
+  leadDev: "Oli Northam",
+  agency: "Si digital Ltd",
+  year: 2020,
+  website: ""
+}

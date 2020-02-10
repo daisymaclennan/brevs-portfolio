@@ -18,12 +18,9 @@ const StyledNameImage = styled(NameImage)`
     opacity: 0.5;
   }
 
-
   @media screen and (max-width: 1000px){
     position: absolute;
     top: 0; bottom: 0; left: 30px; right: 30px;
-
-
   }
 `
 
