@@ -95,10 +95,10 @@ const StyledTeam = styled(Team)`
     margin-left: -30px;
     margin-right: -30px;
 
-    grid-template-columns: 280px 280px 280px 280px;
-    grid-column-gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-row-gap: 60px;
-    padding-left: calc(62px + var(--columnWidth));
+    padding-left: 50px;
+    //padding-left: calc(62px + var(--columnWidth));
     padding-top: 120px;
     padding-bottom: 120px;
 

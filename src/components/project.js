@@ -68,6 +68,7 @@ const StyledProject = styled(Project)`
 
     p{
       line-height: 200%;
+      margin-bottom: 0;
     }
 
     img{

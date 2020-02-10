@@ -5,6 +5,7 @@ import FixedHeader from './fixed-header'
 import lightTheme from '../themes/light'
 import desktopStripes from './desktop-stripes'
 import mobileStripes from './mobile-stripes'
+import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -40,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 112.5%;
   }
 
-  h3, a{
+  h3{
     font-size: calc(112px + (372 - 112) * ((100vw - 300px) / (2000 - 300)));
     line-height: 112.5%;
   }
@@ -88,6 +89,7 @@ const Layout = ({ children }) => {
         <FixedHeader theme={ theme } changeTheme={ changeTheme }/>
         <SideBar />
         { children }
+        <Footer />
       </ThemeProvider>
     </div>
   )
