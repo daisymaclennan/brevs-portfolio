@@ -9,7 +9,6 @@ import CenterBigText from '../components/center-big-text'
 import Stats from '../components/stats'
 import Project from '../components/project'
 import Team from '../components/team'
-import ContentWithImageDark from '../components/content-with-image-dark'
 
 export default () => (
   <Layout>
