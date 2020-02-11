@@ -44,7 +44,7 @@ const StyledThemeButtons = styled(ThemeButtons)`
 
   @media screen and (max-width: 1000px){
     position: fixed;
-    top: 16px;
+    top: 20px;
     left: calc(50vw - 20px);
   }
 `

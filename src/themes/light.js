@@ -1,7 +1,7 @@
 const lightTheme = {
   colors: {
     background: '#FFFFFF',
-    backgroundShapes: '#F6F6F6',
+    backgroundShapes: 'rgba(246, 246, 246, 0.6)',
     titleGrey: '#111111',
     titleSolid: '#111111',
     titleShape: '#FDE5F1',

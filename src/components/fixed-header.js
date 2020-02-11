@@ -15,7 +15,7 @@ const StyledFixedHeader = styled(FixedHeader)`
   z-index: 5;
 
   @media screen and (max-width: 1000px){
-    top: 16px;
+    top: 20px;
     right: 16px;
   }
 

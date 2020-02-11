@@ -25,7 +25,7 @@ const StyledSideBar = styled(SideBar)`
   }
 
   @media screen and (max-width: 1000px){
-    top: 16px;
+    top: 20px;
     left: 17px;
     padding-bottom: 15px;
     clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);

@@ -14,8 +14,7 @@ const Tagline = styled.h2`
   @media screen and (min-width: 1000px){
     grid-column-start: 2;
     grid-column-end: 11;
-
-    margin-top: 150px;
+    margin-top: calc(130px + 5vw);
   }
 `
 
