@@ -75,12 +75,12 @@ export default () => (
 )
 
 const stats = [
-  ["5", "Client projects"],
-  ["2", "Years of experience"],
-  ["1200", "Lines of Lorem Ipsum"],
-  ["12", "Instagram Posts"],
-  ["4", "Dribbble Posts"],
-  ["8", "Client projects"]
+  [5, "Client projects"],
+  [2, "Years of experience"],
+  [1200, "Lines of Lorem Ipsum"],
+  [12, "Instagram Posts"],
+  [4, "Dribbble Posts"],
+  [8, "Client projects"]
 ]
 
 const smartdriverclubTeam = {
