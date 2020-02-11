@@ -23,6 +23,7 @@ const StyledFooter = styled(Footer)`
 
   a{
     opacity: 0.8;
+    text-decoration: none;
   }
 
   div{
