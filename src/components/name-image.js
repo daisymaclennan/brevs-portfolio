@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import GridLayout from './grid-layout'
 import {useSpring, animated} from 'react-spring'
@@ -6,7 +6,6 @@ import {useSpring, animated} from 'react-spring'
 const NameImage = ({ className }) => {
   const [jackProps, setJack] = useSpring(() => ({marginLeft: "100px"}))
   const [brevProps, setBrev] = useSpring(() => ({marginLeft: "150px"}))
-  const titleRef = useRef(null)
 
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimation)
