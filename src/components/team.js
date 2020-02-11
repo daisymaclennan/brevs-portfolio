@@ -6,19 +6,19 @@ const Team = ({ className, team }) => (
     <div>
       <h5>UI</h5>
       {team.ui.map((member) => (
-        <p>{member}</p>
+        <p key={member}>{member}</p>
       ))}
     </div>
     <div>
       <h5>UX</h5>
       {team.ux.map((member) => (
-        <p>{member}</p>
+        <p key={member}>{member}</p>
       ))}
     </div>
     <div>
       <h5>Dev</h5>
       {team.dev.map((member) => (
-        <p>{member}</p>
+        <p key={member}>{member}</p>
       ))}
     </div>
     <div>

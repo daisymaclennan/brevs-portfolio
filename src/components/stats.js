@@ -5,7 +5,7 @@ const Stats = ({ className, stats }) => (
   <div className={ className }>
     <div className="grid">
       {stats.map(stat => (
-        <div className="grid-item">
+        <div className="grid-item" key={stat}>
           <span>{stat[0]}</span>
           <span>{stat[1]}</span>
         </div>
