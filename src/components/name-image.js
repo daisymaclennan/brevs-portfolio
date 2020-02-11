@@ -1,20 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import GridLayout from './grid-layout'
+import {useSpring, animated} from 'react-spring'
 
-const NameImage = ({ className }) => (
-  <GridLayout className={ className }>
-    <div className="background">
-      <img className="person" src="/images/man-pic.png" alt="Man looking away casually" />
-    </div>
-    <div className="text">
-      <div className="mask">
-        <h2>Jack</h2>
+const NameImage = ({ className }) => {
+  const [props, set, stop] = useSpring(() => ({marginLeft: "100px"}))
+  // Stop animation
+  return(
+    <GridLayout className={ className } onWheel={() => {
+      console.log(window.scrollY)
+      set({marginLeft: `${window.scrollY + 100 * 0.8}px`})
+    }}>
+      <div className="background">
+        <img className="person" src="/images/man-pic.png" alt="Man looking away casually" />
       </div>
-      <h2 className="ontop-text">Bretherick</h2>
-    </div>
-  </GridLayout>
-)
+      <div className="text">
+        <div className="mask">
+          <animated.h2 style={props}>Jack</animated.h2>
+        </div>
+        <h2 className="ontop-text">Bretherick</h2>
+      </div>
+    </GridLayout>
+  )
+}
 
 const StyledNameImage = styled(NameImage)`
   margin-left: 0;
