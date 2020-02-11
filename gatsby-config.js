@@ -14,7 +14,7 @@ module.exports = {
         short_name: "JackBretherickPortfolio",
         start_url: "/",
         display: "standalone",
-        icon: "static/images/icon.png", // This path is relative to the root of the site.
+        icon: "static/images/icon--dark.png", // This path is relative to the root of the site.
       },
     },
     {
