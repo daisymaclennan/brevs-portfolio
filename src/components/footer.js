@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import HighlightText from './highlight-text'
+import personalDetails from '../../static/personal-details'
 
 const Footer = ({ className }) => (
   <footer className={ className }>
     <h3>Find <HighlightText>Me</HighlightText></h3>
     <div>
-      <a>Instagram</a>
-      <a>Dribbble</a>
+      <a href={`${personalDetails.instagramLink}`}>Instagram</a>
+      <a href={`${personalDetails.dribbbleLink}`}>Dribbble</a>
     </div>
     <img src="/images/icon--light.png" alt="Jacks logo" />
   </footer>
