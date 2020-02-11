@@ -10,24 +10,27 @@ const NameImage = ({ className }) => {
   useEffect(() => {
     let mql = window.matchMedia('(min-width: 1000px)')
 
-    mql.addListener(() => {
-      scrollAnimation(mql)
-    })
+    scrollListeners(mql)
 
-    window.addEventListener('scroll', () => scrollAnimation(mql))
+    mql.addListener(() => {
+      scrollListeners(mql)
+    })
 
     return () => window.removeEventListener('scroll', scrollAnimation)
   }, [])
 
-  const scrollAnimation = (mql) => {
-    if(mql.matches){
-      setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
-      setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
-    }else{
-      setJack({marginLeft: `0px`})
-      setBrev({marginLeft: `0px`})
-    }
+  const scrollAnimation = () => {
+    setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
+    setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
+  }
 
+  const scrollListeners = (mql) => {
+    if(mql.matches){
+      window.addEventListener('scroll', scrollAnimation)
+    }
+    if(!mql.matches){
+      window.removeEventListener('scroll', scrollAnimation)
+    }
   }
 
   return(
