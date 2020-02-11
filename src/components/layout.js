@@ -85,6 +85,11 @@ const Layout = ({ children }) => {
   const [theme, changeTheme] = useState(lightTheme)
   return(
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Jack Bretherick Portfolio</title>
+        <link rel="canonical" href="https://jack-bretherick-portfolio.netlify.com/" />
+      </Helmet>
       <ThemeProvider theme={ theme } >
         <GlobalStyle />
         <FixedHeader theme={ theme } changeTheme={ changeTheme }/>
