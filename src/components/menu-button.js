@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const MenuButton = ({ className }) => (
-  <button className={ className }>
+  <button className={ className } aria-label="Menu">
     <span className="menu-text">Menu</span>
     <div>
       <span></span>

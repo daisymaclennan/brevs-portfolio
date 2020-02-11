@@ -6,9 +6,9 @@ import darkTheme from '../themes/dark'
 const ThemeButtons = ({ className, theme, changeTheme }) => {
   return(
     <div className={ className }>
-      <button onClick={() => changeTheme( lightTheme )}>
+      <button onClick={() => changeTheme( lightTheme )} aria-label="Light mode">
       </button>
-      <button onClick={() => changeTheme( darkTheme )}>
+      <button onClick={() => changeTheme( darkTheme )} aria-label="Dark mode">
       </button>
     </div>
   )
