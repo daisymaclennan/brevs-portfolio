@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const SideBar = ({ className }) => (
   <div className={ className }>
-    <img src="/images/icon.png" alt="Logo" />
+    <img src="/images/icon--dark.png" alt="Logo" />
     <h1>Jack Bretherick UI/UX designer</h1>
   </div>
 )
