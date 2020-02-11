@@ -8,13 +8,26 @@ const NameImage = ({ className }) => {
   const [brevProps, setBrev] = useSpring(() => ({marginLeft: "150px"}))
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollAnimation)
-    return () => window.removeEventListener('scroll', scrollAnimation)
-  })
+    let mql = window.matchMedia('(min-width: 1000px)')
 
-  const scrollAnimation = () => {
-    setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
-    setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
+    mql.addListener(() => {
+      scrollAnimation(mql)
+    })
+
+    window.addEventListener('scroll', () => scrollAnimation(mql))
+
+    return () => window.removeEventListener('scroll', scrollAnimation)
+  }, [])
+
+  const scrollAnimation = (mql) => {
+    if(mql.matches){
+      setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
+      setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
+    }else{
+      setJack({marginLeft: `0px`})
+      setBrev({marginLeft: `0px`})
+    }
+
   }
 
   return(
