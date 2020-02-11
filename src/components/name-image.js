@@ -1,24 +1,33 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import GridLayout from './grid-layout'
 import {useSpring, animated} from 'react-spring'
 
 const NameImage = ({ className }) => {
-  const [props, set, stop] = useSpring(() => ({marginLeft: "100px"}))
-  // Stop animation
+  const [jackProps, setJack] = useSpring(() => ({marginLeft: "100px"}))
+  const [brevProps, setBrev] = useSpring(() => ({marginLeft: "150px"}))
+  const titleRef = useRef(null)
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollAnimation)
+    return () => window.removeEventListener('scroll', scrollAnimation)
+  })
+
+  const scrollAnimation = () => {
+    setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
+    setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
+  }
+
   return(
-    <GridLayout className={ className } onWheel={() => {
-      console.log(window.scrollY)
-      set({marginLeft: `${window.scrollY + 100 * 0.8}px`})
-    }}>
+    <GridLayout className={ className }>
       <div className="background">
         <img className="person" src="/images/man-pic.png" alt="Man looking away casually" />
       </div>
       <div className="text">
         <div className="mask">
-          <animated.h2 style={props}>Jack</animated.h2>
+          <animated.h2 style={ jackProps }>Jack</animated.h2>
         </div>
-        <h2 className="ontop-text">Bretherick</h2>
+        <animated.h2 className="ontop-text" style={ brevProps }>Bretherick</animated.h2>
       </div>
     </GridLayout>
   )

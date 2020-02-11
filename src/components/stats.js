@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import AnimatedNumber from './animated-number'
 
 const Stats = ({ className, stats }) => (
   <div className={ className }>
