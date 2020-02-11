@@ -13,6 +13,16 @@ import Team from '../components/team'
 export default () => (
   <Layout>
     <GridLayout>
+    <div css={`
+      grid-column-start: 2;
+      grid-column-end: 13;
+      height: 70px;
+      background-color: ${props => props.theme.colors.backgroundShapes};
+      @media screen and (max-width: 1000px){
+        display: none;
+      }
+    `}>
+    </div>
       <NameImage />
       <Tagline>
         Hi, I’m <HighlightText box>Jack</HighlightText>. I design websites to create better experiences on the web.
