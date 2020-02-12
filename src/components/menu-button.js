@@ -17,6 +17,9 @@ const StyledMenuButton = styled(MenuButton)`
   border: 0;
   background-color: rgba(0, 0, 0, 0);
 
+  //Hiding it because there isn't a menu design yet
+  opacity: 0;
+
   span{
     color: ${props => props.theme.colors.menuButton};
   }
