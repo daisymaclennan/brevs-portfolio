@@ -4,8 +4,6 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import SideBar from './side-bar'
 import FixedHeader from './fixed-header'
 import lightTheme from '../themes/light'
-import desktopStripes from './desktop-stripes'
-import mobileStripes from './mobile-stripes'
 import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
@@ -66,7 +64,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-      background-image: ${mobileStripes};
+      background: repeating-linear-gradient(to right,
+        var(--dark) 0px,
+        var(--dark) 16px,
+        var(--light) 16px,
+        var(--light) 17px,
+        var(--dark) 17px,
+        var(--dark) calc(17px + var(--columnWidth)),
+        var(--light) calc(17px + var(--columnWidth)),
+        var(--light) calc(18px + var(--columnWidth))
+      )
     }
   }
 
@@ -77,7 +84,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-      background-image: ${desktopStripes};
+      background-image: repeating-linear-gradient(to right,
+        var(--dark) 0px,
+        var(--dark) 30px,
+        var(--light) 30px,
+        var(--light) 31px,
+        var(--dark) 31px,
+        var(--dark) calc(31px + var(--columnWidth)),
+        var(--light) calc(31px + var(--columnWidth)),
+        var(--light) calc(32px + var(--columnWidth))
+      );
     }
   }
 `
