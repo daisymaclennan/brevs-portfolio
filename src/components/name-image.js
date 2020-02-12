@@ -56,9 +56,15 @@ const StyledNameImage = styled(NameImage)`
     background-color: ${props => props.theme.colors.backgroundShapes};
   }
 
+  @supports (-webkit-text-stroke: 1px white){
+    .mask > h2{
+      -webkit-text-stroke: 1px white;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+  }
+
   .mask > h2{
-    -webkit-text-stroke: 1px white;
-    color: rgba(255, 255, 255, 0);
+    color: #FFFFFF;
   }
 
   @media screen and (max-width: 1000px){
@@ -138,7 +144,6 @@ const StyledNameImage = styled(NameImage)`
     .mask > h2{
       margin-top: 5vw;
       margin-left: 100px;
-      -webkit-text-stroke: 1px white;
       color: rgba(255, 255, 255, 0);
     }
 
