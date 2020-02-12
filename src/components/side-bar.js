@@ -38,7 +38,6 @@ const StyledSideBar = styled(SideBar)`
 
     h1{
       font-size: 16px;
-      line-height: 32px;
       height: 239px;
     }
   }
@@ -57,7 +56,6 @@ const StyledSideBar = styled(SideBar)`
 
     h1{
       font-size: 24px;
-      line-height: 48px;
       height: 358px;
     }
   }
