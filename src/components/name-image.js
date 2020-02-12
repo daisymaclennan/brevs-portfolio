@@ -10,27 +10,21 @@ const NameImage = ({ className }) => {
   useEffect(() => {
     let mql = window.matchMedia('(min-width: 1000px)')
 
-    scrollListeners(mql)
+    scrollAnimation(mql.matches)
+
+    window.addEventListener('scroll', () => scrollAnimation(mql.matches))
 
     mql.addListener(() => {
-      scrollListeners(mql)
+      scrollAnimation(mql.matches)
     })
 
-    return () => window.removeEventListener('scroll', scrollAnimation)
+
+    return () => window.removeEventListener('scroll', () => scrollAnimation(mql.matches))
   }, [])
 
-  const scrollAnimation = () => {
-    setJack({marginLeft: `${window.scrollY + 100 * 0.8}px`})
-    setBrev({marginLeft: `${window.scrollY * -1 + 250}px`})
-  }
-
-  const scrollListeners = (mql) => {
-    if(mql.matches){
-      window.addEventListener('scroll', scrollAnimation)
-    }
-    if(!mql.matches){
-      window.removeEventListener('scroll', scrollAnimation)
-    }
+  const scrollAnimation = (isDesktop) => {
+    setJack({marginLeft: `${isDesktop ? window.scrollY + 100 * 0.8 : 0}px`})
+    setBrev({marginLeft: `${isDesktop ? window.scrollY * -1 + 250 : 0}px`})
   }
 
   return(
