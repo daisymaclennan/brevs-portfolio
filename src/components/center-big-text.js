@@ -9,6 +9,7 @@ const CenterBigText = styled.div`
 
   @media screen and (max-width: 1000px){
     line-height: 200%;
+    margin-bottom: 40px;
 
     grid-column-start: 1;
     grid-column-end: 5;
