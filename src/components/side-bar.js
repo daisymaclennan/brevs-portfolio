@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SideBar = ({ className }) => (
-  <div className={ className }>
-    <img src="/images/icon--dark.png" alt="Logo" />
-    <h1>Jack Bretherick UI/UX designer</h1>
-  </div>
-)
+const SideBar = ({ className }) => {
+
+  return(
+    <div className={ className }>
+      <img src="/images/icon--dark.png" alt="Logo" />
+      <h1>Jack Bretherick UI/UX designer</h1>
+    </div>
+  )
+}
 
 const StyledSideBar = styled(SideBar)`
   position: fixed;
@@ -37,6 +40,7 @@ const StyledSideBar = styled(SideBar)`
     }
 
     h1{
+      padding-top: 8px;
       font-size: 16px;
       height: 239px;
     }
@@ -55,6 +59,7 @@ const StyledSideBar = styled(SideBar)`
     }
 
     h1{
+      padding-top: 12px;
       font-size: 24px;
       height: 358px;
     }

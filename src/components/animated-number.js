@@ -12,3 +12,6 @@ const AnimatedNumber = ({ value }) => {
 }
 
 export default AnimatedNumber
+
+
+//

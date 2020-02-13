@@ -2,19 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import AnimatedNumber from './animated-number'
 
-const Stats = ({ className, stats }) => (
-  <div className={ className }>
-    <div className="grid">
-      {stats.map(stat => (
-        <div className="grid-item" key={stat}>
-          <AnimatedNumber value={ stat[0] } />
-          {/*<span>{stat[0]}</span>*/}
-          <span>{stat[1]}</span>
-        </div>
-      ))}
+const Stats = ({ className, stats }) => {
+  return(
+    <div className={ className }>
+      <div className="grid">
+        {stats.map(stat => (
+          <div className="grid-item" key={ stat }>
+            <AnimatedNumber value={ stat[0] }/>
+            {/*<span>{stat[0]}</span>*/}
+            <span>{ stat[1] }</span>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 const StyledStats = styled(Stats)`
   display: grid;
