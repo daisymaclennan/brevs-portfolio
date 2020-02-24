@@ -7,6 +7,11 @@ const NameImage = ({ className }) => {
   const [jackProps, setJack] = useSpring(() => ({marginLeft: "100px"}))
   const [brevProps, setBrev] = useSpring(() => ({marginLeft: "150px"}))
 
+  const scrollAnimation = (isDesktop) => {
+    setJack({marginLeft: `${isDesktop ? window.scrollY + 100 * 0.8 : 0}px`})
+    setBrev({marginLeft: `${isDesktop ? window.scrollY * -1 + 250 : 0}px`})
+  }
+
   useEffect(() => {
     let mql = window.matchMedia('(min-width: 1000px)')
 
@@ -22,10 +27,7 @@ const NameImage = ({ className }) => {
     return () => window.removeEventListener('scroll', () => scrollAnimation(mql.matches))
   }, [])
 
-  const scrollAnimation = (isDesktop) => {
-    setJack({marginLeft: `${isDesktop ? window.scrollY + 100 * 0.8 : 0}px`})
-    setBrev({marginLeft: `${isDesktop ? window.scrollY * -1 + 250 : 0}px`})
-  }
+
 
   return(
     <GridLayout className={ className }>

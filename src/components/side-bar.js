@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SideBar = ({ className }) => {
-
   return(
     <div className={ className }>
       <img src="/images/icon--dark.png" alt="Logo" />
@@ -31,7 +30,15 @@ const StyledSideBar = styled(SideBar)`
     top: 20px;
     left: 17px;
     padding-bottom: 15px;
-    clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);
+    //clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px);
+    clip-path: polygon(0px 0px, 0px 32px, 32px 32px, 32px 0px);
+    /*Removing the h1 from view on smaller screens until I can animate it in*/
+
+    @supports not (clip-path: polygon(0px 0px, 0px 350px, 32px 350px, 32px 0px)){
+      h1{
+        display: none;
+      }
+    }
 
     img{
       width: 32px;
@@ -51,6 +58,12 @@ const StyledSideBar = styled(SideBar)`
     left: 31px;
     padding-bottom: 30px;
     clip-path: polygon(0px 0px, 0px 470px, 48px 470px, 48px 0px);
+
+    @supports not (clip-path: polygon(0px 0px, 0px 470px, 48px 470px, 48px 0px)){
+      h1{
+        display: none;
+      }
+    }
 
     img{
       width: 48px;
