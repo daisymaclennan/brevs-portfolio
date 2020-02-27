@@ -69,7 +69,6 @@ const StyledNameImage = styled(NameImage)`
   }
 
   @media screen and (max-width: 1000px){
-    overflow-x: hidden;
     grid-column-start: 1;
     grid-column-end: 5;
 
