@@ -84,8 +84,8 @@ const StyledNameImage = styled(NameImage)`
       position: absolute;
       object-fit: cover;
       height: calc(100vh - 60px);
-      width: calc(100% + calc(90px + var(--columnWidth)));
-      transform: translate(calc(-1 * calc(63px + var(--columnWidth))), 60px);
+      width: 100vw;
+      transform: translate(calc(-1 * calc(34px + var(--columnWidth))),60px);
       z-index: 0;
       object-position: center;
     }
