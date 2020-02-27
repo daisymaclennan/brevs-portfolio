@@ -80,6 +80,9 @@ const StyledNameImage = styled(NameImage)`
       height: 100vh;
     }
 
+
+    /*tetsing deployment*/
+
     img{
       position: absolute;
       object-fit: cover;
