@@ -50,12 +50,20 @@ const StyledTeam = styled(Team)`
   background-color: ${props => props.theme.colors.backgroundShapes};
   display: grid;
 
-  h5, p{
+  h5, p, a{
     color: ${props => props.theme.colors.paragraph};
   }
 
   p{
     opacity: 0.8;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  a:hover{
+    border-bottom: 1px solid ${props => props.theme.colors.paragraph};
   }
 
   @media screen and (max-width: 1000px){
@@ -79,7 +87,11 @@ const StyledTeam = styled(Team)`
       line-height: 200%;
     }
 
-    p{
+    a{
+      font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (2000 - 300)));
+    }
+
+    p, a{
       margin-bottom: 0;
     }
 
@@ -106,7 +118,11 @@ const StyledTeam = styled(Team)`
       margin-bottom: 30px;
     }
 
-    p{
+    a{
+      font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (2000 - 300)));
+    }
+
+    p, a{
       margin-bottom: 0;
     }
 
