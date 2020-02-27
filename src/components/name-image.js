@@ -47,6 +47,7 @@ const StyledNameImage = styled(NameImage)`
   margin-right: 0;
   color: #FFFFFF;
   position: relative;
+  overflow-x: hidden;
 
   h2{
     font-size: calc(112px + (372 - 112) * ((100vw - 300px) / (2000 - 300)));
