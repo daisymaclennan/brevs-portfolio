@@ -26,6 +26,10 @@ const StyledFooter = styled(Footer)`
     text-decoration: none;
   }
 
+  a:hover{
+    opacity: 1;
+  }
+
   div{
     display: flex;
     flex-direction: column;
